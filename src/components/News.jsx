@@ -13,7 +13,7 @@ const News = (props) => {
   const {data} = useGetCryptosQuery(100);
   const {data: cryptoNews} = useGetCryptoNewsQuery({ newsCategory,count: props.simplified ? 6 : 12})
   if(!cryptoNews?.value) return 'Loading...'
-  console.log(cryptoNews)
+  
   return (
     <Row gutter={[24,24]}>
       {!(props.simplified) && (
